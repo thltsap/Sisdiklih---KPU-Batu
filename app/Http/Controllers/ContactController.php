@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
+use App\Models\Contact;
+
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -13,7 +16,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $items = Contact::all();
+        return view('pages.admin.contact.index',[
+            'items' => $items
+        ]);
     }
 
     /**
@@ -32,9 +38,12 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
-        //
+        $data = $request->all();
+
+        Contact::create($data);
+        return redirect()->route('contact.index');
     }
 
     /**
@@ -56,7 +65,11 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Contact::all()->find($id);
+
+        return view('pages.admin.contact.edit',[
+            'item' => $item
+        ]);
     }
 
     /**
@@ -66,9 +79,15 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ContactRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = Contact::find($id);
+
+        $item->update($data);
+
+        return redirect()->route('contact.index');
     }
 
     /**
@@ -79,6 +98,9 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Contact::find($id);
+        $item->delete();
+
+        return redirect()->route('contact.index');
     }
 }

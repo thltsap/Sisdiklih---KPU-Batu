@@ -6,10 +6,7 @@
 
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Data User</h1>
-          <a href="" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-              <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Data User
-          </a>
+        <h1 class="h3 mb-0 text-gray-800">Contact</h1>
       </div>
 
       <!-- Content Row -->
@@ -21,10 +18,8 @@
                       <tr>
                           <th>ID</th>
                           <th>Nama</th>
-                          <th>Alamat</th>
-                          <th>Tanggal Lahir</th>
-                          <th>Nomer HP</th>
-                          <th>Gambar</th>
+                          <th>Email</th>
+                          <th>Pesan</th>
                           <th>Action</th>
                       </tr>
                       </thead>
@@ -33,16 +28,13 @@
                           <tr>
                               <td>{{ $item->id }}</td>
                               <td>{{ $item->name }}</td>
-                              <td>{{ $item->address }}</td>
-                              <td>{{ $item->date-birth }}</td>
-                              <td>{{ $item->phone }}</td>
-                              <td>{{ $item->image }}</td>
-                              <td>{{ $item->type }}</td>
+                              <td>{{ $item->email }}</td>
+                              <td>{{ $item->message }}</td>
                               <td>
-                                  <a href="" class="btn btn-info">
+                                  <a href="{{ route('contact.edit', $item->id) }}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>
                                   </a>
-                                  <form action="" method="post" class="d-inline">
+                                  <form action="{{route( 'contact.destroy', $item->id) }}" method="post" class="d-inline">
                                       @csrf
                                       @method('delete')
                                       <button class="btn btn-danger">

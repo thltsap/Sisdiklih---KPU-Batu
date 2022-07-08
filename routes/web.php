@@ -20,7 +20,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 
-Route::get('/', [DashboardController::class, 'index'])
+Route::get('/admin', [DashboardController::class, 'index'])
         ->name('dashboard');
        
         Route::resource('/user-data', UserDataController::class);

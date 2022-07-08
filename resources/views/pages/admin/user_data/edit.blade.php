@@ -6,7 +6,7 @@
 
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Ubah Paket Travel {{ $item->title }}</h1>
+        <h1 class="h3 mb-0 text-gray-800">Ubah Contact {{ $item->name}}</h1>
       </div>
 
       <!-- Content Row -->
@@ -25,45 +25,26 @@
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title" placeholder="Title" value="{{ $item->title }}">
+                        <label for="name">Nama</label>
+                        <input type="text" class="form-control" name="name" placeholder="name" value="{{ $item->name }}">
                     </div>
                     <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" class="form-control" name="location" placeholder="Location" value="{{ $item->location }}">
+                        <label for="address">Alamat</label>
+                        <input type="text" class="form-control" name="address" placeholder="address" value="{{ $item->address }}">
                     </div>
                     <div class="form-group">
-                        <label for="about">About</label>
-                        <textarea name="about" rows="10" class="d-block w-100 form-control">{{ $item->about }}</textarea>
+                        <label for="date-birth">Tanggal Lahir</label>
+                        <input type="text" class="form-control" name="date-birth" placeholder="date-birth" value="{{ $item->date-birth }}">
                     </div>
                     <div class="form-group">
-                        <label for="featured_event">Featured Event</label>
-                        <input type="text" class="form-control" name="featured_event" placeholder="Featured Event" value="{{ $item->featured_event }}">
+                        <label for="phone">Nomer HP</label>
+                        <input type="text" class="form-control" name="phone" placeholder="phone" value="{{ $item->phone }}">
                     </div>
                     <div class="form-group">
-                        <label for="language">Language</label>
-                        <input type="text" class="form-control" name="language" placeholder="Language" value="{{ $item->language }}">
+                        <label for="image">Gambar</label>
+                        <input type="text" class="form-control" name="image" placeholder="image" value="{{ $item->image }}">
                     </div>
-                    <div class="form-group">
-                        <label for="foods">Foods</label>
-                        <input type="text" class="form-control" name="foods" placeholder="Foods" value="{{ $item->foods }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="departure_date">Departure Date</label>
-                        <input type="date" class="form-control" name="departure_date" placeholder="Departure Date" value="{{ $item->departure_date }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="duration">Duration</label>
-                        <input type="text" class="form-control" name="duration" placeholder="Duration" value="{{ $item->duration }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Type</label>
-                        <input type="text" class="form-control" name="type" placeholder="Type" value="{{ $item->type }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="price">Price</label>
-                        <input type="number" class="form-control" name="price" placeholder="Price" value="{{ $item->price }}">
-                    </div>
+                    
                     <button type="submit" class="btn btn-primary btn-block">
                         Ubah
                     </button>

@@ -4,7 +4,7 @@
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
     <div class="sidebar-brand-text mx-3">
-      NOMADS Admin
+      SISDIKLIH Admin
     </div>
   </a>
 
@@ -19,21 +19,15 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="">
-      <i class="fas fa-fw fa-hotel"></i>
-      <span>Paket Travel</span></a>
+    <a class="nav-link" href="{{ route('user-data.index') }}">
+      <i class="fas fa-fw fa-user"></i>
+      <span>Data User</span></a>
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="">
-      <i class="fas fa-fw fa-images"></i>
-      <span>Galeri Travel</span></a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link" href="">
-      <i class="fas fa-fw fa-dollar-sign"></i>
-      <span>Transaksi</span></a>
+    <a class="nav-link" href="{{ route('contact.index') }}">
+    <i class="fas fa-fw fa-id-badge"></i>
+      <span>Contact</span></a>
   </li>
 
   <hr class="sidebar-divider">
