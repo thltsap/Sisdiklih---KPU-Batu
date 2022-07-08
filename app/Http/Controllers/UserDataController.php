@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserDataController extends Controller
@@ -13,7 +14,10 @@ class UserDataController extends Controller
      */
     public function index()
     {
-        //
+        $items = User::all();
+        return view('pages.admin.user_data.index',[
+            'items' => $items
+        ]);
     }
 
     /**
