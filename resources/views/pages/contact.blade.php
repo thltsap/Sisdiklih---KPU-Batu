@@ -30,9 +30,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
-                    <h1 class="display-6 mb-4">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h6 class="text-primary text-uppercase mb-2">Kontak Kami</h6>
+                    <h1 class="display-6 mb-4">Jika Butuh Bantuan, Silahkan Hubungi Kami</h1>
+                    {{--  <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>  --}}
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -47,12 +47,12 @@
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            {{--  <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control border-0 bg-light" id="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
-                            </div>
+                            </div>  --}}
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control border-0 bg-light" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
