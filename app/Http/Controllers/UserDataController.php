@@ -73,7 +73,7 @@ class UserDataController extends Controller
      */
     public function edit($id)
     {
-        $item = UserData::all($id);       
+        $item = UserData::all()->find($id);      
 
         return view('pages.admin.user_data.edit',[
             'item' => $item
@@ -94,7 +94,7 @@ class UserDataController extends Controller
             'assets/gallery', 'public'
         );
 
-        $item = UserData::all($id);
+        $item = UserData::all()->find($id);
 
         $item->update($data);
 
@@ -109,7 +109,7 @@ class UserDataController extends Controller
      */
     public function destroy($id)
     {
-        $item = UserData::all($id);
+        $item = UserData::all()->find($id);
         $item->delete();
 
         return redirect()->route('user-data.index');

@@ -40,10 +40,10 @@
                                 <img src="{{ Storage::url($item->image) }}" alt="" style="width: 200px" class="img-thumbnail">
                             </td>                              
                               <td>
-                                  <a href="" class="btn btn-info">
+                                  <a href="{{ route('user-data.edit', $item->id) }}" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>
                                   </a>
-                                  <form action="" method="post" class="d-inline">
+                                  <form action="{{route( 'user-data.destroy', $item->id) }}" method="post" class="d-inline">
                                       @csrf
                                       @method('delete')
                                       <button class="btn btn-danger">
