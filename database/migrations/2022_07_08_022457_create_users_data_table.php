@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_datas', function (Blueprint $table) {
+        Schema::create('user_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->date('date-birth');
+            $table->date('date');
             $table->string('phone');
             $table->text('image');
             $table->timestamps();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_data');
+        Schema::dropIfExists('user_data');
     }
 };

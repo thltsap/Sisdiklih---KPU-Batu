@@ -7,7 +7,7 @@
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Data User</h1>
-          <a href="" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+          <a href="{{ route('user-data.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
               <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Data User
           </a>
       </div>
@@ -34,10 +34,11 @@
                               <td>{{ $item->id }}</td>
                               <td>{{ $item->name }}</td>
                               <td>{{ $item->address }}</td>
-                              <td>{{ $item->date-birth }}</td>
+                              <td>{{ $item->date}}</td>
                               <td>{{ $item->phone }}</td>
-                              <td>{{ $item->image }}</td>
-                              <td>{{ $item->type }}</td>
+                              <td>
+                                <img src="{{ Storage::url($item->image) }}" alt="" style="width: 200px" class="img-thumbnail">
+                            </td>                              
                               <td>
                                   <a href="" class="btn btn-info">
                                       <i class="fa fa-pencil-alt"></i>

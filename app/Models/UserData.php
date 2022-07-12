@@ -10,14 +10,14 @@ class UserData extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'address', 'date-birth', 'phone','image'
+        'name', 'address', 'date', 'phone','image'
     ];
 
     protected $hidden = [
 
     ];
 
-    public function UserData(){
-        return $this->hasMany( UserData::class, 'user_id', 'id' );
+    public function user_datas(){
+        return $this->hasMany( UserData::class, 'user_datas' );
     }
 }
