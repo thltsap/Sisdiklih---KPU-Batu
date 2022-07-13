@@ -177,7 +177,7 @@ KPU Batu
                             <center>
                             <img class="img-fluid" src="images/kotak.png" alt="" width="300" height="300" </>
                             <div class="courses-overlay">
-                                <a class="btn btn-outline-primary border-2" href="">Read More</a>
+                                <a class="btn btn-outline-primary border-2" href="{{ route('formUser.index') }}">Read More</a>
                             </div>
                             </center>
                         </div>

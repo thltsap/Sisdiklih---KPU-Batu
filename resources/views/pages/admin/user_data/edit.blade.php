@@ -21,7 +21,7 @@
         @endif
         <div class="card shadow">
             <div class="card-body">
-                <form action="" method="post">
+                <form action="{{ route('user-data.update', $item->id) }}" method="post"  enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <label for="birthdate">Tanggal Lahir</label>
-                        <input type="text" class="form-control" name="birthdate" placeholder="date" value="{{ $item->birthdate }}">
+                        <input type="date" class="form-control" name="birthdate" placeholder="date" value="{{ $item->birthdate }}">
                     </div>
                     <div class="form-group">
                         <label for="phone">Nomer HP</label>
