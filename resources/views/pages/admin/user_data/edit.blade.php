@@ -33,8 +33,8 @@
                         <input type="text" class="form-control" name="address" placeholder="address" value="{{ $item->address }}">
                     </div>
                     <div class="form-group">
-                        <label for="date">Tanggal Lahir</label>
-                        <input type="text" class="form-control" name="date" placeholder="date" value="{{ $item->date }}">
+                        <label for="birthdate">Tanggal Lahir</label>
+                        <input type="text" class="form-control" name="birthdate" placeholder="date" value="{{ $item->birthdate }}">
                     </div>
                     <div class="form-group">
                         <label for="phone">Nomer HP</label>

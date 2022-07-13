@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserDataRequeste;
-use App\Models\User;
 use App\Models\UserData;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+
 
 class UserDataController extends Controller
 {
@@ -17,10 +18,13 @@ class UserDataController extends Controller
     public function index()
     {
         $items = UserData::all();
+       
         return view('pages.admin.user_data.index',[
-            'items' => $items
+            'items' => $items,
+            
         ]);
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -44,6 +48,7 @@ class UserDataController extends Controller
      */
     public function store(UserDataRequeste $request)
     {
+        $date = 
         $data = $request->all();
         $data['image'] = $request->file('image')->store(
             'assets/gallery', 'public'

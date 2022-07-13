@@ -26,7 +26,7 @@ class UserDataRequeste extends FormRequest
         return [            
             'name' => 'required',
             'address' => 'required',
-            'date' => 'required|date',
+            'birthdate' => 'required|date',
             'phone' => 'required',
             'image' => 'required|image',
         ];

@@ -23,6 +23,7 @@
                           <th>Nama</th>
                           <th>Alamat</th>
                           <th>Tanggal Lahir</th>
+                          <th>Umur</th>
                           <th>Nomer HP</th>
                           <th>Gambar</th>
                           <th>Action</th>
@@ -34,7 +35,8 @@
                               <td>{{ $item->id }}</td>
                               <td>{{ $item->name }}</td>
                               <td>{{ $item->address }}</td>
-                              <td>{{ $item->date}}</td>
+                              <td>{{$item->birthdate}}</td>
+                              <td>{{$item->age}}</td>
                               <td>{{ $item->phone }}</td>
                               <td>
                                 <img src="{{ Storage::url($item->image) }}" alt="" style="width: 200px" class="img-thumbnail">

@@ -32,8 +32,8 @@
                         <input type="text" class="form-control" name="address" placeholder="Alamat" >
                     </div>
                     <div class="form-group">
-                        <label for="date">Tanggal Lahir</label>
-                        <input type="date" class="form-control" name="date">
+                        <label for="birthdate">Tanggal Lahir</label>
+                        <input type="date" class="form-control" name="birthdate">
                     </div>
                     <div class="form-group">
                         <label for="phone">No. Handphone</label>
