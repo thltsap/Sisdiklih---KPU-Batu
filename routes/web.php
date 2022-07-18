@@ -6,6 +6,7 @@ use App\Http\Controllers\FormUserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserDataController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,21 @@ Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::resource('/formUser', FormUserController::class);
 
-Route::get('/admin', [DashboardController::class, 'index'])
+// Route::get('/admin', [DashboardController::class, 'index'])
+//         ->name('dashboard');
+       
+//         Route::resource('/user-data', UserDataController::class);
+//         Route::resource('/contact', ContactController::class);        
+Route::prefix('admin')
+    //->namespace('Admin')
+    ->middleware(['auth', 'admin'])
+    ->group(function() {
+        Route::get('/', [DashboardController::class, 'index'])
         ->name('dashboard');
        
         Route::resource('/user-data', UserDataController::class);
-        Route::resource('/contact', ContactController::class);        
+        Route::resource('/contact', ContactController::class);  
+    });       
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

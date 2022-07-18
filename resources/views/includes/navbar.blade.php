@@ -17,7 +17,25 @@
                 <a href="{{route('about')}}" class="nav-item nav-link">Tentang</a>
                 <a href="" class="nav-item nav-link">Kontak</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login</a>
+
+            @guest
+            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login</a> -->
+            <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+        <button class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" type="button"
+                onclick="event.preventDefault(); location.href='{{url('login')}}';">
+          Login
+        </button>
+      </form>
+      @endguest
+
+      @auth
+      <form class="form-inline my-2 my-lg-0 d-none d-md-block" action="{{  url('logout') }}" method="POST">
+            @csrf
+            <button class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" type="submit">
+                Logout
+            </button>
+        </form>
+      @endauth
         </div>
     </nav>
     <!-- Navbar End -->
