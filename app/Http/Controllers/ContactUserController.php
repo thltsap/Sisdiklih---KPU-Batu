@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\FormUserRequest;
-use App\Models\UserData;
+use App\Http\Requests\ContactUserRequest;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class FormUserController extends Controller
+class ContactUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class FormUserController extends Controller
      */
     public function index()
     {
-        return view('pages.formUser');
+        return view('pages.contact');
     }
 
     /**
@@ -25,9 +25,9 @@ class FormUserController extends Controller
      */
     public function create()
     {
-        $formuser = UserData::all();
-        return view('pages.formUser',[
-            'formusers' => $formuser
+        $contactuser = Contact::all();
+        return view('pages.contact',[
+            'contactuser' => $contactuser
         ]);
     }
 
@@ -37,16 +37,12 @@ class FormUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(FormUserRequest $request)
+    public function store(ContactUserRequest $request)
     {
-       
-        $data = $request->all();
-        $data['image'] = $request->file('image')->store(
-            'assets/gallery', 'public'
-        );
+        $data = $request->all();        
 
-        UserData::create($data);
-        return view('pages.success');
+        Contact::create($data);
+        return view('pages.successContact');
     }
 
     /**
@@ -92,5 +88,5 @@ class FormUserController extends Controller
     public function destroy($id)
     {
         //
-    }   
+    }
 }

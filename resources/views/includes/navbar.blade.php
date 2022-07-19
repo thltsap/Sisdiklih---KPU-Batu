@@ -15,7 +15,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{route('home')}}" class="nav-item nav-link active">Beranda</a>
                 <a href="{{route('about')}}" class="nav-item nav-link">Tentang</a>
-                <a href="" class="nav-item nav-link">Kontak</a>
+                <a href="{{ route('contact-user.index') }}" class="nav-item nav-link">Kontak</a>
             </div>
 
             @guest

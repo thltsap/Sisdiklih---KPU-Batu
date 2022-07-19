@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormUserController;
 use App\Http\Controllers\HomeController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 */
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
-Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::resource('/contact-user', ContactUserController::class);
 Route::resource('/formUser', FormUserController::class);
 
 // Route::get('/admin', [DashboardController::class, 'index'])
