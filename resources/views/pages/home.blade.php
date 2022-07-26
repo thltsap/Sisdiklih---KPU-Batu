@@ -95,7 +95,7 @@ KPU Batu
                         </div>
                         <div class="row g-4">
                             <div class="col-sm-6">
-                                <a class="btn btn-primary py-3 px-3" href="">Read More</a>
+                                <a class="btn btn-primary py-3 px-3" href="{{ route('formUser.index') }}">Form</a>
                             </div>
                             {{--  <div class="col-sm-6">
                                 <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
@@ -127,7 +127,7 @@ KPU Batu
                         <div class="text-center p-4 pt-0">
                             <div class="fs-5 py-1 px-4 mb-4"></div>
                             <h5 class="mb-3">KPU</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
+                            <p>#TemanPemilih, yuk kenal sejarah KPU Kota Batu!</p>
                             {{--  <ol class="breadcrumb justify-content-center mb-0">
                                 <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
@@ -137,7 +137,7 @@ KPU Batu
                             <center>
                             <img class="img-fluid" src="images/kpumelayani.png" alt="">
                             <div class="courses-overlay">
-                                <a class="btn btn-outline-primary border-2" href="">Read More</a>
+                                <a class="btn btn-outline-primary border-2" href="{{ route('kpu') }}">Read More</a>
                             </div>
                         </center>
                         </div>
@@ -148,7 +148,7 @@ KPU Batu
                         <div class="text-center p-4 pt-0">
                             <div class="fs-5 py-1 px-4 mb-4"></div>
                             <h5 class="mb-3">Panduan</h5>
-                            <p>Panduan untuk menjadi pemilih yang baik dan benar</p>
+                            <p>Panduan untuk menjadi #TemanPemilih yang baik dan benar</p>
                             {{--  <ol class="breadcrumb justify-content-center mb-0">
                                 <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
@@ -157,7 +157,7 @@ KPU Batu
                         <div class="position-relative mt-2">
                             <img class="img-fluid" src="images/kotak2.png" alt="">
                             <div class="courses-overlay">
-                                <a class="btn btn-outline-primary border-2" href="">Read More</a>
+                                <a class="btn btn-outline-primary border-2" href="{{ route('panduan') }}">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ KPU Batu
                         <div class="text-center p-4 pt-0">
                             <div class="fs-5 py-1 px-4 mb-4"></div>
                             <h5 class="mb-3">Form</h5>
-                            <p>Isi form data diri untuk menjadi pemilih</p>
+                            <p>Isi form data diri untuk menjadi #TemanPemilih</p>
                             {{--  <ol class="breadcrumb justify-content-center mb-0">
                                 <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
