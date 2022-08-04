@@ -24,41 +24,34 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden ps-5 pt-5 h-100">
                     <img class="position-absolute w-100 h-100" src="images/tahapan.jpg">
-                    {{--  <a href="https://id.pngtree.com/so/hari-kemerdekaan-indonesia">hari kemerdekaan indonesia png dari id.pngtree.com</a>  --}}
-                    {{--  <img class="position-absolute top-0 start-0 pe-3 pb-3" src="images/kpulogo.png" alt="" style="width: 200px; height: 200px;">  --}}
+                    <!-- {{--  <a href="https://id.pngtree.com/so/hari-kemerdekaan-indonesia">hari kemerdekaan indonesia png dari id.pngtree.com</a>  --}}
+                    {{--  <img class="position-absolute top-0 start-0 pe-3 pb-3" src="images/kpulogo.png" alt="" style="width: 200px; height: 200px;">  --}} -->
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
                     <h6 class="text-primary text-uppercase mb-2">Panduan </h6>
-                    <h1 class="display-6 mb-4">Tahapan Untuk Menjadi Pemilih</h1>
+                    <h1 class="display-6 mb-4">Syarat Untuk Menjadi Pemilih</h1>
        
                     <div class="row g-2 mb-4 pb-2">
                         <div class="col-sm-6">
-                            <i class="fa fa-check text-primary me-2"></i>Mengisi form yang sudah disediakan
+                            <i class="fa fa-check text-primary me-2"></i>Genap berumur 17 (tujuh belas) tahun atau lebih, sudah kawin, atau sudah pernah kawin;
                         </div>
                         <div class="col-sm-6">
-                            <i class="fa fa-check text-primary me-2"></i>Mengayomi Pemilih
+                            <i class="fa fa-check text-primary me-2"></i>Tidak sedang dicabut hak pilihnya berdasarkan putusan pengadilan yang telah mempunyai kekuatan hukum tetap;
                         </div>
                         <div class="col-sm-6">
-                            <i class="fa fa-check text-primary me-2"></i>Mengoordinasi Pemilihan
-                        </div>
-                        <div class="col-sm-6">
-                            <i class="fa fa-check text-primary me-2"></i>Menyampaikan Daftar Pemilihan
-                        </div>
-                    </div>
+                            <i class="fa fa-check text-primary me-2"></i>Berdomisili di wilayah Negara Kesatuan Republik Indonesia yang dibuktikan dengan KTP-el;
 
-                    <div class="row g-4">
-                        {{--  <div class="col-sm-6">
-                            <a class="btn btn-primary py-3 px-5" href="">Read More</a>
-                        </div>  --}}
+                        </div>
                         <div class="col-sm-6">
-                            <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0341511123">
-                                <span class="flex-shrink-0 btn-square bg-primary">
-                                    <i class="fa fa-phone-alt text-white"></i>
-                                </span>
-                                <span class="px-3">(0341)511123</span>
-                            </a>
+                            <i class="fa fa-check text-primary me-2"></i>Berdomisili di luar negeri yang dibuktikan dengan KTP-el dan/atau paspor;
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Dalam hal Pemilih belum mempunyai KTP-el sebagaimana dimaksud dalam huruf c dan huruf d, dapat menggunakan Surat Keterangan;
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Tidak sedang menjadi anggota Tentara Nasional Indonesia atau Kepolisian Negara Republik Indonesia.
                         </div>
                     </div>
                 </div>
