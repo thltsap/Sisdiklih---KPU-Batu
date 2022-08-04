@@ -70,6 +70,7 @@ KPU Batu
                     </div>
                     <img class="position-absolute top-0 start-0 pe-3 pb-3" src="images/kpulogo.png" alt="" style="width: 100px; height: 100px;">
                 </div>
+
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-50">
@@ -81,6 +82,41 @@ KPU Batu
                 <div class="row g-4">
                     <div class="col-sm-6">
                         <a class="btn btn-primary py-3 px-3" href="">Read More</a>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-50">
+                        <h6 class="text-primary text-uppercase mb-2">Tentang Panduan</h6>
+                        <h1 class="display-6 mb-4">Panduan Pemilihan</h1>
+                        <p>Mengisi data diri pada form yang telah disediakan agar data kalian tercatat dalam daftar pemilih. Selengkapnya dapat melihat halaman panduan untuk lebih lanjut. </p>
+                        {{--  <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>  --}}
+                        {{--  <div class="row g-2 mb-4 pb-2">
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Fully Licensed
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Online Tracking
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Afordable Fee 
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Best Trainers
+                            </div>  --}}
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <a class="btn btn-primary py-3 px-3" href="{{ route('formUser.index') }}">Form</a>
+                            </div>
+                            {{--  <div class="col-sm-6">
+                                <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
+                                    <span class="flex-shrink-0 btn-square bg-primary">
+                                        <i class="fa fa-phone-alt text-white"></i>
+                                    </span>
+                                    <span class="px-3">+012 345 6789</span>
+                                </a>
+                            </div>  --}}
+                        </div>
+
                     </div>
                     <!-- <audio controls="pauseOthers" style="vertical-align: middle" src="storage/audio/Tay.mp3" type="audio/mp3">               
             </audio> -->
@@ -95,6 +131,7 @@ KPU Batu
 </div>
 </div>
 <!-- About End -->
+
 
 
 <!-- Courses Start -->
@@ -112,6 +149,23 @@ KPU Batu
                         <h5 class="mb-3">KPU</h5>
                         <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
                         {{-- <ol class="breadcrumb justify-content-center mb-0">
+
+    <!-- Courses Start -->
+    <div class="container-xxl courses my-6 py-6 pb-0">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h6 class="text-primary text-uppercase mb-2">Halaman Lainnya</h6>
+                <h1 class="display-6 mb-4">Pelajari Lebih Lanjut</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="fs-5 py-1 px-4 mb-4"></div>
+                            <h5 class="mb-3">KPU</h5>
+                            <p>#TemanPemilih, yuk kenal sejarah KPU Kota Batu!</p>
+                            {{--  <ol class="breadcrumb justify-content-center mb-0">
+
                                 <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
                             </ol>  --}}
@@ -120,11 +174,12 @@ KPU Batu
                         <center>
                             <img class="img-fluid" src="images/kpumelayani.png" alt="">
                             <div class="courses-overlay">
-                                <a class="btn btn-outline-primary border-2" href="">Read More</a>
+                                <a class="btn btn-outline-primary border-2" href="{{ route('kpu') }}">Read More</a>
                             </div>
                         </center>
                     </div>
                 </div>
+
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
@@ -152,6 +207,34 @@ KPU Batu
                         <h5 class="mb-3">Form</h5>
                         <p>Isi form data diri untuk menjadi pemilih</p>
                         {{-- <ol class="breadcrumb justify-content-center mb-0">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="fs-5 py-1 px-4 mb-4"></div>
+                            <h5 class="mb-3">Panduan</h5>
+                            <p>Panduan untuk menjadi #TemanPemilih yang baik dan benar</p>
+                            {{--  <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>  --}}
+                        </div>
+                        <div class="position-relative mt-2">
+                            <img class="img-fluid" src="images/kotak2.png" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{{ route('panduan') }}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="fs-5 py-1 px-4 mb-4"></div>
+                            <h5 class="mb-3">Form</h5>
+                            <p>Isi form data diri untuk menjadi #TemanPemilih</p>
+                            {{--  <ol class="breadcrumb justify-content-center mb-0">
+
                                 <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
                                 <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
                             </ol>  --}}

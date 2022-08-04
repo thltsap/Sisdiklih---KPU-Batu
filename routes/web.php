@@ -23,6 +23,8 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::resource('/contact-user', ContactUserController::class);
 Route::resource('/formUser', FormUserController::class);
+Route::get('/panduan',[HomeController::class,'panduan'])->name('panduan');
+Route::get('/kpu',[HomeController::class,'kpu'])->name('kpu');
 
 // Route::get('/admin', [DashboardController::class, 'index'])
 //         ->name('dashboard');

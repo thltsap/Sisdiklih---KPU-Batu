@@ -25,7 +25,7 @@
                     <label for="name">Nama</label>
                     <input type="text" class="form-control" name="name" placeholder="Nama">
                 </div>
-                <div class="form-group">
+                <div class="form-group py-2">
                     <label for="address">Alamat</label>
                     <input type="text" class="form-control" name="address" placeholder="Alamat">
                 </div>
@@ -33,12 +33,12 @@
                     <label for="birthdate">Tanggal Lahir</label>
                     <input type="date" class="form-control" name="birthdate">
                 </div>
-                <div class="form-group">
+                <div class="form-group py-2">
                     <label for="phone">No. Handphone</label>
                     <input type="text" class="form-control" name="phone" placeholder="No. Handphone">
                 </div>
                 <div class="form-group">
-                    <label for="image">Gambar</label>
+                    <label for="image">Foto KTP</label>
                     <input type="file" class="form-control" name="image" placeholder="Image">
                 </div>
                 

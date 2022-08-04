@@ -20,6 +20,13 @@ class HomeController extends Controller
         return view('pages.contact');
     }
 
-   
+    public function panduan(){
+        return view('pages.panduan');
+    }
+
+    public function kpu(){
+        return view('pages.kpu');
+    }
+
 }
     
