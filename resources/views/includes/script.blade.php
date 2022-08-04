@@ -5,6 +5,13 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        function pauseOthers(element){
+            $("audio").not(element).each(function(index,audio){
+                audio.pause();
+            })
+        }
+    </script>    
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

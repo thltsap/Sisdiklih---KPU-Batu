@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Response;
 
 use Illuminate\Http\Request;
 
@@ -18,5 +20,6 @@ class HomeController extends Controller
         return view('pages.contact');
     }
 
+   
 }
     
