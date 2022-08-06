@@ -75,7 +75,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0 mt-2">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
@@ -83,6 +83,13 @@
                             </div>
                         </div>
                     </form>
+                    <div class="form-group row mb-0 mt-2">
+                        <div class="col-md-6 offset-md-4">
+                            <p>Sudah memiliki Akun?</p>
+                            <a type="submit" class="btn btn-secondary" href="{{ route('login') }}">
+                                {{ __('Login') }}
+                            </a>
+                        </div>
                 </div>
             </div>
         </div>
