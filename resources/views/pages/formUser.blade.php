@@ -37,9 +37,9 @@
                     <label for="phone">No. Handphone atau Whatsapp</label>
                     <input type="text" class="form-control" name="phone" placeholder="No. Handphone">
                 </div>
-                <div class="form-group">
-                    <label for="image">Foto KTP atau Kartu Pelajar</label>
-                    <input type="file" class="form-control" name="image" placeholder="Image">
+                <div class="form-group py-2">
+                    <label for="nik">NIK KTP (Jika Punya)</label>
+                    <input type="text" class="form-control" name="nik" placeholder="NIK KTP">
                 </div>
                 
                 <button type="submit" class="btn btn-primary btn-block mt-4">

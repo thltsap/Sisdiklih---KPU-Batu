@@ -40,9 +40,9 @@
                         <input type="text" class="form-control" name="phone" placeholder="No. Handphone" >
                     </div>
                     <div class="form-group">
-                        <label for="image">Gambar</label>
-                        <input type="file" class="form-control" name="image" placeholder="Image" >
-                    </div>                    
+                        <label for="nik">NIK KTP</label>
+                        <input type="text" class="form-control" name="nik" placeholder="NIK">
+                    </div>                  
                     <button type="submit" class="btn btn-primary btn-block">
                         Simpan
                     </button>

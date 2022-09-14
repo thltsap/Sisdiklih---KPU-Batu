@@ -28,7 +28,7 @@ class FormUserRequest extends FormRequest
             'address' => 'required',
             'birthdate' => 'required|date',
             'phone' => 'required',
-            'image' => 'required|image',
+            'nik' => 'nullable'
         ];
     }
 }

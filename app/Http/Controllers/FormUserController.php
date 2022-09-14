@@ -41,9 +41,9 @@ class FormUserController extends Controller
     {
        
         $data = $request->all();
-        $data['image'] = $request->file('image')->store(
-            'assets/gallery', 'public'
-        );
+        // $data['image'] = $request->file('image')->store(
+        //     'assets/gallery', 'public'
+        // );
 
         UserData::create($data);
         return view('pages.success');

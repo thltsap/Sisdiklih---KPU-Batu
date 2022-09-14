@@ -25,7 +25,7 @@
                           <th>Tanggal Lahir</th>
                           <th>Umur</th>
                           <th>Nomer HP</th>
-                          <th>Gambar</th>
+                          <th>NIK KTP</th>
                           <th>Action</th>
                       </tr>
                       </thead>
@@ -39,7 +39,7 @@
                               <td>{{$item->age}}</td>
                               <td>{{ $item->phone }}</td>
                               <td>
-                                <img src="{{ Storage::url($item->image) }}" alt="" style="width: 200px" class="img-thumbnail">
+                                {{$item->nik}}
                             </td>                              
                               <td>
                                   <a href="{{ route('user-data.edit', $item->id) }}" class="btn btn-info">

@@ -41,8 +41,8 @@
                         <input type="text" class="form-control" name="phone" placeholder="phone" value="{{ $item->phone }}">
                     </div>
                     <div class="form-group">
-                        <label for="image">Image</label>
-                        <input type="file" class="form-control" name="image" placeholder="Image" value="{{ $item->image }}">
+                        <label for="nik">NIK KTP</label>
+                        <input type="text" class="form-control" name="nik" placeholder="NIK KTP" value="{{ $item->nik }}">
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block">

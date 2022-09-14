@@ -50,9 +50,9 @@ class UserDataController extends Controller
     {
         $date = 
         $data = $request->all();
-        $data['image'] = $request->file('image')->store(
-            'assets/gallery', 'public'
-        );
+        // $data['image'] = $request->file('image')->store(
+        //     'assets/gallery', 'public'
+        // );
 
         UserData::create($data);
 
@@ -95,9 +95,9 @@ class UserDataController extends Controller
     public function update(UserDataRequeste $request, $id)
     {
         $data = $request->all();
-        $data['image'] = $request->file('image')->store(
-            'assets/gallery', 'public'
-        );
+        // $data['image'] = $request->file('image')->store(
+        //     'assets/gallery', 'public'
+        // );
 
         $item = UserData::all()->find($id);
 

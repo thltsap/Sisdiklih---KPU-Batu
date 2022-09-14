@@ -10,6 +10,6 @@ class FormUserModel extends Model
     use HasFactory;
     
     protected $fillable = [
-        'name', 'address', 'birthdate', 'phone','image', 'age'
+        'name', 'address', 'birthdate', 'phone','nik', 'age'
     ];
 }
