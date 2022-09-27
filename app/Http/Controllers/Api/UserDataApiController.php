@@ -1,30 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UserDataRequeste;
+use App\Http\Resources\UserDataResource;
 use App\Models\UserData;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Traits\ApiResponse;
 
-
-class UserDataController extends Controller
+class UserDataApiController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    use ApiResponse; 
+
     public function index()
     {
         $items = UserData::all();
-       
-        return view('pages.admin.user_data.index',[
-            'items' => $items,
-            
-        ]);
+
+        return $this->apiSuccess($items);
+
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -33,12 +33,8 @@ class UserDataController extends Controller
      */
     public function create()
     {
-        $user_data = UserData::all();
-        return view('pages.admin.user_data.create',[
-            'user_datas' => $user_data
-        ]);
+        //
     }
-    
 
     /**
      * Store a newly created resource in storage.
@@ -48,14 +44,11 @@ class UserDataController extends Controller
      */
     public function store(UserDataRequeste $request)
     {
-        $data = $request->all();
-        // $data['image'] = $request->file('image')->store(
-        //     'assets/gallery', 'public'
-        // );
+        $request->validated();
+        $items = new UserData($request->all());
+        $items->save();
 
-        UserData::create($data);
-
-        return redirect()->route('user-data.index');
+        return $this->apiSuccess($items);
     }
 
     /**
@@ -64,9 +57,9 @@ class UserDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(UserData $items)
     {
-        //
+        return $this->apiSuccess($items);
     }
 
     /**
@@ -77,11 +70,7 @@ class UserDataController extends Controller
      */
     public function edit($id)
     {
-        $item = UserData::all()->find($id);      
-
-        return view('pages.admin.user_data.edit',[
-            'item' => $item
-        ]);
+        //
     }
 
     /**
@@ -91,18 +80,11 @@ class UserDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserDataRequeste $request, $id)
+    public function update(UserDataRequeste $request, UserData $items)
     {
-        $data = $request->all();
-        // $data['image'] = $request->file('image')->store(
-        //     'assets/gallery', 'public'
-        // );
+        $items->update($request->validated());
 
-        $item = UserData::all()->find($id);
-
-        $item->update($data);
-
-        return redirect()->route('user-data.index');
+        return new UserDataResource($items);
     }
 
     /**
@@ -111,12 +93,11 @@ class UserDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(UserData $items)
     {
-        $item = UserData::all()->find($id);
-        $item->delete();
+        $items->delete();
 
-        return redirect()->route('user-data.index');
-
+        return 'Data berhasil dihapus';
     }
+    
 }
