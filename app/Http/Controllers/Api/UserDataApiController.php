@@ -8,6 +8,8 @@ use App\Http\Resources\UserDataResource;
 use App\Models\UserData;
 use Illuminate\Http\Request;
 use App\Traits\ApiResponse;
+use Illuminate\Support\Facades\Validator;
+use App\Helpers\ResponseFormatter;
 
 class UserDataApiController extends Controller
 {
@@ -22,8 +24,10 @@ class UserDataApiController extends Controller
     {
         $items = UserData::all();
 
-        return $this->apiSuccess($items);
-
+        return response()->json([
+            'status' => true,
+            'items' => $items
+        ]);
     }
 
     /**
@@ -31,11 +35,7 @@ class UserDataApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      *
@@ -44,11 +44,13 @@ class UserDataApiController extends Controller
      */
     public function store(UserDataRequeste $request)
     {
-        $request->validated();
-        $items = new UserData($request->all());
-        $items->save();
-
-        return $this->apiSuccess($items);
+        $items = UserData::create($request->all());
+        
+        return response()->json([
+            'status' => true,
+            'message' => "User Created successfully!",
+            'items' => $items
+        ], 200);
     }
 
     /**
@@ -59,7 +61,7 @@ class UserDataApiController extends Controller
      */
     public function show(UserData $items)
     {
-        return $this->apiSuccess($items);
+        return new UserDataResource($items);
     }
 
     /**
@@ -68,11 +70,7 @@ class UserDataApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -80,11 +78,16 @@ class UserDataApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserDataRequeste $request, UserData $items)
+    public function update(UserDataRequeste $request, $id)
     {
-        $items->update($request->validated());
+        $items = UserData::findOrFail($id);
+        $items->update($request->all());
 
-        return new UserDataResource($items);
+        return response()->json([
+            'status' => true,
+            'message' => "User Updated successfully!",
+            'items' => $items
+        ], 200);
     }
 
     /**
@@ -93,11 +96,15 @@ class UserDataApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserData $items)
+    public function destroy(Request $request, $id)
     {
+        $items = UserData::findOrFail($id);
         $items->delete();
 
-        return 'Data berhasil dihapus';
+        return response()->json([
+            'status' => true,
+            'message' => "User Delete successfully!",
+        ], 200);
     }
     
 }
