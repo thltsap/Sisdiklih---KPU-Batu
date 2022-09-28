@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birthdate');
             $table->string('phone');
-            $table->text('image');
+            $table->string('nik');
             $table->timestamps();
         });
     }

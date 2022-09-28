@@ -22,8 +22,8 @@ KPU Batu
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <h1 class="display-2 text-light mb-5 animated slideInDown">Jadilah Generasi Anti Golput</h1>
-                                <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
-                                <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                                <a href="https://youtu.be/8l8lEc_R0Zk" class="btn btn-primary py-sm-3 px-sm-5">Pelajari Lebih Lanjut</a>
+                                <!-- <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a> -->
                             </div>
                         </div>
                     </div>
@@ -36,8 +36,8 @@ KPU Batu
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <h1 class="display-2 text-light mb-5 animated slideInDown">Pilihlah Pemimpin Negeri Ini</h1>
-                                <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
-                                <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                                <a href="{{route('panduan')}}" class="btn btn-primary py-sm-3 px-sm-5">Pelajari Lebih Lanjut</a>
+                                <!-- <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a> -->
                             </div>
                         </div>
                     </div>
