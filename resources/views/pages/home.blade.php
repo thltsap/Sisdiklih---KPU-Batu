@@ -90,11 +90,17 @@ KPU Batu
                         </div>
 
                     </div>
-                    <!-- <audio controls="pauseOthers" style="vertical-align: middle" src="storage/audio/Tay.mp3" type="audio/mp3">               
-            </audio> -->
-                    <audio controls onplay="pauseOthers(this);">
-                    <source src="storage/audio/Tay.mp3" type="audio/mp3">
+                    
+                <audio controls autoplay="true" loop onplay="pauseOthers(this);">
+                    <source src="audio/Tay.mp3" type="audio/mp3">
                 </audio>
+
+                {{--  <iframe src="audio/Tay.mp3" allow="autoplay">
+                </iframe>  --}}
+
+                {{--  <audio controls autoplay id="autoplay">
+                    <source src="audio/Tay.mp3" type="audio/mp3">
+                </audio>  --}}
 
                 </div>
             </div>
@@ -164,12 +170,15 @@ KPU Batu
             </div>
         </div>
     </div>
+    
 <script type="text/javascript">
     function pauseOthers(element) {
         $("audio").not(element).each(function(index, audio) {
-            audio.pause();
+            audio.play();
         })
     }
 </script>
+
+
 <!-- Courses End -->
 @endsection
