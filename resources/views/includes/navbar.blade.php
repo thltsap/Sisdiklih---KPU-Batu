@@ -6,7 +6,7 @@
         </a>  --}}
         <div class="logo_container">
             <div class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-                <a href="{{ route('home') }}" class="m-0 text-primary md"><img src="../images/logorpp.jpg" width="60px" alt="">SISDIKLIH: Sistem Informasi Sosialisasi & Diklih</a></div>
+                <a href="{{ route('home') }}" class="m-0 text-primary md"><img src="../images/LOGO.png" width="170px" alt="">SISDIKLIH: Sistem Informasi Sosialisasi & Pendidikan Pemilih</a></div>
         </div>
         <button type="button" class="navbar-toggler me-4 " data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
