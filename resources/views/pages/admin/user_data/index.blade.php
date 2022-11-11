@@ -16,7 +16,16 @@
       <div class="row">
           <div class="card-body">
               <div class="table-responsive">
-                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <form class="float-right form-inline" id="searchForm" method="get" action="{{ route('user-data.index') }}" role="search">
+                    <div class="form-group mb-3 mt-3">
+                        <input type="text" name="keyword" class="form-control" id="Keyword" aria-describedby="Keyword" placeholder="Nama/NIK" value="{{request()->query('keyword')}}">
+                    </div>
+                    <button type="submit" class="btn btn-outline-info mx-2">Cari</button>
+                    <a href="{{ route('user-data.index') }}">
+                        <button type="button" class="btn btn-outline-danger">Reset</button>
+                    </a>
+                </form>
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">                   
                       <thead>
                       <tr>
                           <th>ID</th>
@@ -62,6 +71,7 @@
                       @endforelse
                       </tbody>
                   </table>
+                  {{ $items->links() }}
               </div>
           </div>
       </div>

@@ -15,14 +15,30 @@ class UserDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $items = UserData::all();
+        // $items = UserData::all();
        
-        return view('pages.admin.user_data.index',[
-            'items' => $items,
+        // return view('pages.admin.user_data.index',[
+        //     'items' => $items,
             
-        ]);
+        // ]);
+         //fungsi eloquent menampilkan data menggunakan pagination        
+         $items =UserData::where([
+            ['nik', '!=', null, 'OR', 'name', '!=', null], //ketika form search kosong, maka request akan null. Ambil semua data di database
+            [function ($query) use ($request) {
+                if (($keyword = $request->keyword)) {
+                    $query->orWhere('nik', 'LIKE', '%' . $keyword . '%')
+                        ->orWhere('name', 'LIKE', '%' . $keyword . '%')->get(); //ketika form search terisi, request tidak null. Ambil data sesuai keyword
+                }
+            }]
+        ])   
+        ->orderBy('id', 'asc')->paginate(10);
+        return view('pages.admin.user_data.index', compact('items'))->
+        with('i', (request()->input('page', 1) - 1) * 5); 
+        
+        $paginate = UserData::orderBy('id', 'asc')->paginate(3);
+        return view('pages.admin.user_data.index', ['paginate'=>$paginate]);
     }
     
 
