@@ -56,6 +56,21 @@ KPU Batu
 </div>
 <!-- Carousel End -->
 
+<div class="container">
+    <div class="row">           
+        <div class="mt-4 center">
+            <div class="counter green">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h3>Jumlah Pendaftar</h3>
+                </div>
+                <span class="counter-value">{{$user_data}}</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- About Start -->
 <div class="container-xxl py-6">
@@ -91,9 +106,9 @@ KPU Batu
 
                     </div>
                     
-                <audio controls autoplay="true" loop onplay="pauseOthers(this);">
+                {{--  <audio controls autoplay="true" loop onplay="pauseOthers(this);">
                     <source src="audio/Tay.mp3" type="audio/mp3">
-                </audio>
+                </audio>  --}}
 
                 {{--  <iframe src="audio/Tay.mp3" allow="autoplay">
                 </iframe>  --}}
@@ -171,14 +186,32 @@ KPU Batu
         </div>
     </div>
     
-<script type="text/javascript">
+    
+
+{{--  <script type="text/javascript">
     function pauseOthers(element) {
         $("audio").not(element).each(function(index, audio) {
             audio.play();
         })
     }
-</script>
+</script>  --}}
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js">
+ 
+$(document).ready(function(){
+    $('.counter-value').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 3500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
+</script>
 
 <!-- Courses End -->
 @endsection
