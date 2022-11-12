@@ -91,11 +91,10 @@ KPU Batu
 
                     </div>
                     <!-- <audio controls="pauseOthers" style="vertical-align: middle" src="storage/audio/Tay.mp3" type="audio/mp3">               
-            </audio> -->
-                    <audio controls onplay="pauseOthers(this);">
+            </audio> -->                    
+                <audio controls autoplay>
                     <source src="storage/audio/Tay.mp3" type="audio/mp3">
                 </audio>
-
                 </div>
             </div>
         </div>
@@ -167,9 +166,14 @@ KPU Batu
 <script type="text/javascript">
     function pauseOthers(element) {
         $("audio").not(element).each(function(index, audio) {
-            audio.pause();
+            audio.get(0).play();
         })
     }
 </script>
+<!-- <script>
+window.onload = function() {
+  var context = new AudioContext();
+}
+</script> -->
 <!-- Courses End -->
 @endsection
