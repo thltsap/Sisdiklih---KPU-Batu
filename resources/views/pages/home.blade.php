@@ -56,6 +56,21 @@ KPU Batu
 </div>
 <!-- Carousel End -->
 
+<div class="container">
+    <div class="row">           
+        <div class="mt-4 center">
+            <div class="counter green">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h3>Jumlah Pendaftar</h3>
+                </div>
+                <span class="counter-value">{{$user_data}}</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- About Start -->
 <div class="container-xxl py-6">
@@ -90,11 +105,26 @@ KPU Batu
                         </div>
 
                     </div>
+<<<<<<< HEAD
                     <!-- <audio controls="pauseOthers" style="vertical-align: middle" src="storage/audio/Tay.mp3" type="audio/mp3">               
             </audio> -->                    
                 <audio controls autoplay>
                     <source src="storage/audio/Tay.mp3" type="audio/mp3">
                 </audio>
+=======
+                    
+                {{--  <audio controls autoplay="true" loop onplay="pauseOthers(this);">
+                    <source src="audio/Tay.mp3" type="audio/mp3">
+                </audio>  --}}
+
+                {{--  <iframe src="audio/Tay.mp3" allow="autoplay">
+                </iframe>  --}}
+
+                {{--  <audio controls autoplay id="autoplay">
+                    <source src="audio/Tay.mp3" type="audio/mp3">
+                </audio>  --}}
+
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
                 </div>
             </div>
         </div>
@@ -163,17 +193,45 @@ KPU Batu
             </div>
         </div>
     </div>
-<script type="text/javascript">
+    
+    
+
+{{--  <script type="text/javascript">
     function pauseOthers(element) {
         $("audio").not(element).each(function(index, audio) {
+<<<<<<< HEAD
             audio.get(0).play();
+=======
+            audio.play();
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
         })
     }
+</script>  --}}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js">
+ 
+$(document).ready(function(){
+    $('.counter-value').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 3500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
 </script>
+<<<<<<< HEAD
 <!-- <script>
 window.onload = function() {
   var context = new AudioContext();
 }
 </script> -->
+=======
+
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
 <!-- Courses End -->
 @endsection

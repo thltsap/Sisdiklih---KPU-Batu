@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-4">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body mt-4">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -62,18 +62,16 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif  --}}
-                            </div>                        
-                            
+                            </div>   
                         </div>
-                        
                     </form>
                     <div class="form-group row mb-0 mt-2">
                         <div class="col-md-6 offset-md-4">
-                            <p>Tidak Memiliki Akun?</p>
-                            <a type="submit" class="btn btn-secondary"  href="{{ route('register') }}">
+                            <p>Tidak memiliki Akun?</p>
+                            <a type="submit" class="btn btn-secondary" href="{{ route('register') }}">
                                 {{ __('Register') }}
                             </a>
-                            </div>
+                        </div>
                 </div>
             </div>
         </div>
