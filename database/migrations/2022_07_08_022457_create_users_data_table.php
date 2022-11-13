@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birthdate');
             $table->string('phone');
-            $table->string('nik');
+            $table->string('nik')->nullable();
             $table->timestamps();
         });
     }

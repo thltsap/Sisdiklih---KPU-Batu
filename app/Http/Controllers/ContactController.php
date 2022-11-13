@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -16,10 +16,12 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $items = Contact::all();
-        return view('pages.admin.contact.index',[
-            'items' => $items
-        ]);
+        // $items = Contact::all();
+        // return view('pages.admin.contact.index',[
+        //     'items' => $items
+        // ]);
+        $items = DB::table('contacts')->orderBy('id','asc')->paginate(10);
+        return view('pages.admin.contact.index', compact('items')); 
     }
 
     /**

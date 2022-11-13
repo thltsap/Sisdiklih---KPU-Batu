@@ -14,6 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{route('home')}}" class="nav-item nav-link active">Beranda</a>
+                <a href="{{ route('formUser.index') }}" class="nav-item nav-link">Form</a>
                 <a href="{{route('about')}}" class="nav-item nav-link">Tentang</a>
                 <a href="{{ route('contact-user.index') }}" class="nav-item nav-link">Kontak</a>
             </div>
