@@ -105,6 +105,13 @@ KPU Batu
                         </div>
 
                     </div>
+<<<<<<< HEAD
+                    <!-- <audio controls="pauseOthers" style="vertical-align: middle" src="storage/audio/Tay.mp3" type="audio/mp3">               
+            </audio> -->                    
+                <audio controls autoplay>
+                    <source src="storage/audio/Tay.mp3" type="audio/mp3">
+                </audio>
+=======
                     
                 {{--  <audio controls autoplay="true" loop onplay="pauseOthers(this);">
                     <source src="audio/Tay.mp3" type="audio/mp3">
@@ -117,6 +124,7 @@ KPU Batu
                     <source src="audio/Tay.mp3" type="audio/mp3">
                 </audio>  --}}
 
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
                 </div>
             </div>
         </div>
@@ -191,7 +199,11 @@ KPU Batu
 {{--  <script type="text/javascript">
     function pauseOthers(element) {
         $("audio").not(element).each(function(index, audio) {
+<<<<<<< HEAD
+            audio.get(0).play();
+=======
             audio.play();
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
         })
     }
 </script>  --}}
@@ -212,6 +224,14 @@ $(document).ready(function(){
     });
 });
 </script>
+<<<<<<< HEAD
+<!-- <script>
+window.onload = function() {
+  var context = new AudioContext();
+}
+</script> -->
+=======
 
+>>>>>>> 21caa2116bd2c0c3806158c6912fad8d8732ad7d
 <!-- Courses End -->
 @endsection
